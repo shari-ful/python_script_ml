@@ -1,10 +1,10 @@
 from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
-from dotenv import load_env
+from dotenv import load_dotenv
 import os
 
-load_env()
+load_dotenv()
 
 POSTGRES_DB_HOST = os.environ.get('POSTGRES_DB_HOST')
 POSTGRES_DB_USER = os.environ.get('POSTGRES_DB_USER')
@@ -50,6 +50,7 @@ def delete_data(id):
     if person:
         session.delete(person)
         session.commit()
+
 
 
 session.close()

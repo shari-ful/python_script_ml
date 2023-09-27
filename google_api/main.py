@@ -1,9 +1,9 @@
 import os
-from dotenv import load_env
+from dotenv import load_dotenv
 import requests
 
 
-load_env()
+load_dotenv()
 
 API_KEY = os.environ.get('API_KEY')
 GOOGLE_MAP_URL = 'https://maps.googleapis.com/maps/api/geocode/json'
